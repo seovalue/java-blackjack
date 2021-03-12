@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Dealer extends Gamer {
 
+    public static final int DRAW_MAX = 16;
     private static final String NAME = "딜러";
 
     private Dealer(final String name) {
@@ -23,6 +24,6 @@ public class Dealer extends Gamer {
 
     @Override
     public boolean canDraw() {
-        return !state.isFinished() && state.satisfyRule();
+        return !state.isFinished() && state.isScoreOver();
     }
 }

@@ -1,11 +1,10 @@
 package blackjack.domain.state;
 
 import blackjack.domain.card.Cards;
+import blackjack.domain.gamer.Dealer;
 import blackjack.domain.money.Money;
 
 public abstract class Running extends Started {
-
-    public static final int RULE_TO_DRAW_FOR_DEALER = 16;
 
     public Running(final Cards cards) {
         super(cards);
@@ -22,7 +21,7 @@ public abstract class Running extends Started {
     }
 
     @Override
-    public boolean satisfyRule() {
-        return cards().calculate() <= RULE_TO_DRAW_FOR_DEALER;
+    public boolean isScoreOver() {
+        return cards().calculate() <= Dealer.DRAW_MAX;
     }
 }

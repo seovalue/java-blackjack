@@ -13,7 +13,7 @@ public interface State {
 
     boolean isFinished();
 
-    boolean satisfyRule();
+    boolean isScoreOver();
 
     double profit(final Money money);
 }
