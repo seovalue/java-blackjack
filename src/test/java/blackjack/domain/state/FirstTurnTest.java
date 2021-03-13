@@ -1,10 +1,8 @@
 package blackjack.domain.state;
 
-import blackjack.BlackjackApplication;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 import static blackjack.domain.Fixtures.*;
 import static org.assertj.core.api.Assertions.assertThat;

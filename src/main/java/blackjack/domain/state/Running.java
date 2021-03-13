@@ -1,7 +1,6 @@
 package blackjack.domain.state;
 
 import blackjack.domain.card.Cards;
-import blackjack.domain.gamer.Dealer;
 import blackjack.domain.money.Money;
 
 public abstract class Running extends Started {

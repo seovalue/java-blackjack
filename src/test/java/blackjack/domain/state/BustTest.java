@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static blackjack.domain.Fixtures.*;
+import static blackjack.domain.Fixtures.CLUB_TEN;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
@@ -26,9 +26,7 @@ class BustTest {
 
     @Test
     void profit() {
-        assertThatThrownBy(() -> {
-            bust.profit(new Money(1000));})
-                .isInstanceOf(UnsupportedOperationException.class);
+        assertThat(bust.profit(new Money(1000))).isEqualTo(-1000.0);
     }
 
     @DisplayName("Bust 상태의 경우 stay 시 현재 상태 반환")
@@ -41,7 +39,8 @@ class BustTest {
     @Test
     void draw() {
         assertThatThrownBy(() -> {
-            bust.draw(Card.of(Suit.CLUB, Denomination.FOUR));})
-        .isInstanceOf(UnsupportedOperationException.class);
+            bust.draw(Card.of(Suit.CLUB, Denomination.FOUR));
+        })
+                .isInstanceOf(UnsupportedOperationException.class);
     }
 }

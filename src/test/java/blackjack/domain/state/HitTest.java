@@ -25,7 +25,8 @@ class HitTest {
     @Test
     void profit() {
         assertThatThrownBy(() -> {
-            hit.profit(new Money(1000));})
+            hit.profit(new Money(1000));
+        })
                 .isInstanceOf(UnsupportedOperationException.class);
     }
 

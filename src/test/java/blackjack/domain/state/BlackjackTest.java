@@ -10,7 +10,8 @@ import java.util.Arrays;
 
 import static blackjack.domain.Fixtures.CLUB_ACE;
 import static blackjack.domain.Fixtures.CLUB_TEN;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class BlackjackTest {
     @Test
