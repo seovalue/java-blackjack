@@ -21,7 +21,7 @@ class BustTest {
     @BeforeEach
     void setUp() {
         bust = FirstTurn.draw(Arrays.asList(CLUB_TEN, CLUB_TEN));
-        bust.draw(Card.of(Suit.CLUB, Denomination.TEN));
+        bust = bust.draw(Card.of(Suit.CLUB, Denomination.TEN));
     }
 
     @Test
@@ -34,16 +34,14 @@ class BustTest {
     @DisplayName("Bust 상태의 경우 stay 시 현재 상태 반환")
     @Test
     void stay() {
-        assertThat(bust.stay()).isEqualTo(Bust.class);
+        assertThat(bust.stay().getClass()).isEqualTo(Bust.class);
     }
 
     @DisplayName("Bust 상태의 경우 draw 시 마지막 상태이므로 Exception을 발생")
     @Test
     void draw() {
-
-        bust.draw(Card.of(Suit.CLUB, Denomination.FOUR));
-//        assertThatThrownBy(() -> {
-//            bust.draw(Card.of(Suit.CLUB, Denomination.FOUR));})
-//        .isInstanceOf(UnsupportedOperationException.class);
+        assertThatThrownBy(() -> {
+            bust.draw(Card.of(Suit.CLUB, Denomination.FOUR));})
+        .isInstanceOf(UnsupportedOperationException.class);
     }
 }
