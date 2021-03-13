@@ -13,6 +13,7 @@ public class Fixtures {
     public static final Card CLUB_TWO = Card.of(Suit.CLUB, Denomination.TWO);
     public static final Card CLUB_TEN = Card.of(Suit.CLUB, Denomination.TEN);
     public static final Card CLUB_KING = Card.of(Suit.CLUB, Denomination.KING);
+    public static final Card CLUB_NINE = Card.of(Suit.CLUB, Denomination.NINE);
     public static final List<Card> HIT = new ArrayList<>(
             Arrays.asList(
                     Card.of(Suit.SPADE, Denomination.ACE),
