@@ -24,6 +24,6 @@ public class Dealer extends Gamer {
 
     @Override
     public boolean canDraw() {
-        return !state.isFinished() && state.isScoreOver();
+        return !state.isFinished() && state.isScoreOver(DRAW_MAX);
     }
 }

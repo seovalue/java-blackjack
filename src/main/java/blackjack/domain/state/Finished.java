@@ -30,7 +30,7 @@ public abstract class Finished extends Started {
     }
 
     @Override
-    public boolean isScoreOver() {
+    public boolean isScoreOver(final int basis) {
         return false;
     }
 

@@ -21,7 +21,7 @@ public abstract class Running extends Started {
     }
 
     @Override
-    public boolean isScoreOver() {
-        return cards().calculate() <= Dealer.DRAW_MAX;
+    public boolean isScoreOver(final int basis) {
+        return cards().calculate() <= basis;
     }
 }
